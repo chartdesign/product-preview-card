@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@100;500;700&display=swap");
+
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Fraunces", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--cream);
+}
+
+p {
+  font-size: 14px;
+  color: var(--darkGrayishBlue);
+  font-family: "Montserrat";
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--veryDarkBlue);
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-box {
+  max-width: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: grid;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 375px;
+}
+
+.product-img {
+  border-radius: 20px 0 0 20px;
+}
+
+.product-info {
+  background-color: var(--white);
+  padding: 30px;
+}
+
+.product-catg {
+  letter-spacing: 7px;
+}
+
+.prod-desc {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.price {
+  color: var(--darkCyan);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Fraunces";
+  display: inline;
+  margin: 0;
+}
+
+#old-price {
+  text-decoration: line-through;
+  color: var(--darkGrayishBlue);
+  font-size: 0.9rem;
+  display: inline;
+}
+
+.price-box {
+  display: flex;
+  gap: 40px;
+}
+
+/* buy button */
+.btn {
+  width: 100%;
+  padding: 1.1rem;
+  background-color: var(--darkCyan);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+@media (min-width: 650px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+  .product-info {
+    width: 100%;
+  }
+}
